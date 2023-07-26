@@ -34,6 +34,9 @@ Route::post('hello-post/{name}', 'App\Http\Controllers\HelloWorldController@hell
 // Route::get('hello-post/{name}', 'App\Http\Controllers\HelloWorldController@hello');
 
 Route::get('bands', 'App\Http\Controllers\BandController@getAll');
+Route::get('bands/{id}', 'App\Http\Controllers\BandController@getById');
+Route::get('bands/gender/{gender}', 'App\Http\Controllers\BandController@getBandsByGender');
+Route::post('bands/store', 'App\Http\Controllers\BandController@setBandNew');
 
 Route::get('dados', function() {
     return array("Coffe", "Beer", "Coca");
